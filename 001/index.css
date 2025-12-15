@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  width: 400px;
+  height: 400px;
+  /* background-color: black; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* 这里top和left都是左上角距离50%，所以本身不在中间 */
+  /* margin-top: -200px; margin-left: -200px; 即宽和高的一般，可以实现左上移动，实现在中间的效果 */
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  /* 该属性可设置的值包括阴影的 X 轴偏移量、Y 轴偏移量、模糊半径、扩散半径和颜色（0.3是透明度）。 */
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to top right, #6133b1, #3fd0cb);
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  /* 和margin-top,margin-left效果一样，但是可以不知道元素的大小 */
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+}
+
+.number {
+  /* 限制100的大小 */
+  width: 200px;
+  height: 100px;
+  /*拼字   */
+
+  .one_1 {
+    height: 40px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    transform: rotate(50deg);
+    position: absolute;
+    top: 0;
+    left: -16.5px;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .one_2 {
+    height: 100px;
+    width: 24px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+  }
+
+  .zero_1,
+  .zero_2 {
+    height: 100px;
+    width: 100px;
+    /* background-color: #fff; */
+    /* 变成了正圆形 */
+    border-radius: 50%;
+    /* 画出了边框，就变成数字0 */
+    border: 24px solid #fff;
+    position: absolute;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+    z-index: 8;
+    top: 0;
+    left: 17px;
+  }
+
+  .zero_2 {
+    z-index: 6;
+    left: 100px;
+  }
+}
+
+.big {
+  font-size: 82px;
+  font-weight: 700;
+  line-height: 66px;
+}
+
+.small {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
